@@ -1,0 +1,42 @@
+{
+  "name": "empty-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build-dev": "webpack -d --mode development --config webpack.dev.config.js",
+    "build-prod": "webpack -p --mode production --config webpack.prod.config.js",
+    "build-public": "webpack -d --mode production --config webpack.public.config.js",
+    "build-admin": "webpack -d --mode production --config webpack.admin.config.js",
+    "build-frontend": "webpack -d --mode production --config webpack.frontend.config.js",
+    "build-server": "webpack -p --mode production --config webpack.server.config.js",
+    "build": "npm run build-frontend; npm run-build-server",
+    "start": "webpack-dev-server --mode development --config webpack.dev.config.js"
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "vue": "^2.6.10",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.0",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
