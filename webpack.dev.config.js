@@ -2,6 +2,8 @@ const merge = require('webpack-merge')
 const base = require('./webpack.base.config.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 const config = {
   plugins: [
     new HtmlWebpackPlugin({
@@ -12,6 +14,7 @@ const config = {
       localFlag: true,
       akamaiIgnore: '1',
     }),
+    new MiniCssExtractPlugin({})
   ],
   devServer: {
     contentBase: './dist',
